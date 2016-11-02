@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contacto</title>
+		 <title>Empresa</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+		<div id="caja">
+				<header>
+				<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-tooggle="collapse" data-target="#navbar-1">
+								<span class="sr-only">Menu</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="index.html" class="navbar-brand">Empresa</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html">Inicio</a></li>
+								<li><a href="#">Sobre nosotros</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="login.html">Sing in</a></li>
+								<li><a href="contacto.html">Contacto</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<br>
+			<br>
+			<header>
+				<h2>Logo</h2>
+			</header>
+			<div id="formulario">
+				<div class="row">
+					<form  action="contacto.php" method="POST" id="contacto" title="Nombre">
+
+					   <label class="sr-only"  for="nombre">Nombre</label>
+					   <input class="form-control"name="nombre" type="text" required="required" id="nombre" placeholder="nombre" tabindex="1" title="Nombre" required>
+					   <br>
+
+					   <label class="sr-only" for="email">Email</label>
+					   <input class="form-control"name="email" type="email" required="required" id="email" placeholder="email" tabindex="2" title="Email" required>
+					   <br>
+					   <label class="sr-only" for="telefono">Teléfono</label>
+					   <input class="form-control"name="telefono" type="text" id="telefono" placeholder="telefono" tabindex="3" title="Telefono">
+					   <br>
+					   <label class="sr-only"  for="Mensaje">Mensaje</label>
+					   <textarea class="form-control" name="mensaje" rows="4" id="mensaje" placeholder="mensaje" tabindex="6"></textarea>
+					   <br>
+					   <input class="btn btn-primary" type="submit" name="enviar" tabindex="7" value="Enviar">  <input class="btn btn-primary" type="reset" tabindex="8" value="Borrar">
+					   <input type="hidden" name="estado" value="1">
+
+   				</form>
+
+					</div>
+			</div>
+			<footer>
+				Todos los derechos reservados &copy ...
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>
