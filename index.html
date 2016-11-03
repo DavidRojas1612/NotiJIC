@@ -11,7 +11,6 @@
 	</head>
 	<body>
 		<div id="caja">
-
 			<div class="container">
 				<header>
 					<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
@@ -31,28 +30,72 @@
 									<li><a href="#">Sobre nosotros</a></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
-									<li>
-									<li><a href="login.html">Sign in</a></li>
-									<li><a href="contacto.html">Contacto</a></li>
+									<li><a href="#login" data-toggle="modal" class="btn btn-jg">Sign in</a></li>
 								</ul>
-								</div>
+							</div>
 						</div>
 					</nav>
 				</header>
-				<br>
-				<br>
+					<br>
+					<br>
 				<header  class="">
-					<h1 class=""><span class="glyphicon glyphicon-education" aria-hidden="true"></a></span>  NotiJIC</h1>
+					<h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span>  NotiJIC</h2>
 				</header>
 			</div>
-			<div class="row">
+			<div class="modal fade" id="login">
+  			<div class="modal-dialog">
+    			<div class="modal-content">
+      			<div id="lindo"class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<div class="col-md-offset-4 col-md-6">
+        				<h3 id="inicia">Inicia Sesion &nbsp;<span class="glyphicon glyphicon-education"></span></h3>
+							</div>
+					</div>
+      		<div class="modal-body">
+						<form id="formulario2" class="form-horizontal" action="login.php">
+								<div class="form-group">
+										<div class="col-md-offset-3 col-md-6">
+											<input type="email" class="form-control" name="txtu" id="inputEmail3" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-offset-3 col-md-6">
+										<input type="password" class="form-control" id="inputPassword3" name="txtc" placeholder="Password">
+									</div>
+								</div>
+								<div class="row form-group form-inlines">
+									<div class="col-md-offset-3 col-md-9"  >
+										<div class="checkbox">
+											<label>
+										  	<input type="checkbox" value="1" name="remember_me" checked="checked">
+												<span>Recordar mis datos</span>
+											</label>
+										</div><a href="#">¿Olvidaste tu contraseña?</a>
+									</div>
+								</div>
+								<div class="row form-group">
+									<div class="col-md-offset-3 col-md-6">
+										<button type="submit" class="btn btn-info">Iniciar Sesión</button>
+									</div>
+								</div>
+						</form>
+	  		</div>
+
+      		<!--	<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			<button type="button" class="btn btn-primary">Save changes</button>
+      			</div> -->
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="container row">
 				<div class="color1 col-xs-12 col-sm-6 col-md-3">
 					<h3>columna</h3><p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p></div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<!--<div class="clearfix visible-sm-block"></div> organziar errores-->
-					<h3>columna</h3><p class="bg-primary">
+					<h3>columna</h3><p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p></div>
 				<div class="color1 col-xs-12 col-sm-6 col-md-3"><!-- clas="col-md-offset-3" (esto para desplazar columnas hacia la derecha.)-->
@@ -61,33 +104,33 @@
 				</p></div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 				<h3>columna</h3><p>
-			 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p></div>
 			</div>
-
-			<footer>
-				Todos los derechos reservados &copy ...
-			</footer>
-			<section class="info">
-				<div class="infoContent">
-					<article class="block">
-						<i class="icon-social fa fa-facebook-official"></i>
-					</article>
-					<article class="block">
-						<i class="icon-social fa fa-github"></i>
-					</article>
-					<article class="block">
-						<i class="icon-social fa fa-twitter"></i>
-					</article>
-					<article class="block">
-						<i class="icon-social fa fa-youtube"></i>
-					</article>
-				</div>
-			</section>
 		</div>
+		<footer>
+			<div class="col-xs-12 col-sm-6 col-md-3">
+			<div class="infoContent">
+				 <article class="block">
+					 <i class="icon-social fa fa-facebook-official"></i>
+				 </article>
+				 <article class="block">
+					 <i class="icon-social fa fa-github"></i>
+				 </article>
+				 <article class="block">
+					 <i class="icon-social fa fa-twitter"></i>
+				 </article>
+				 <article class="block">
+					 <i class="icon-social fa fa-youtube"></i>
+				 </article>
+			 </div>
+			 </div>
+			Todos los derechos reservados &copy ...
+		</footer>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!--<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
