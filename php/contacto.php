@@ -5,8 +5,6 @@ if(isset($_POST['enviar'])){
 	$nombre = $_POST['nombre'];
 	$email = $_POST['email'];
 	$telefono = $_POST['telefono'];
-	$ciudad = $_POST['ciudad'];
-	$pais = $_POST['pais'];
 	$mensaje = $_POST['mensaje'];
 	
 	///Validamos del lado del servidor que el nombre y el email no estén vacios
@@ -34,14 +32,6 @@ if(isset($_POST['enviar'])){
 				<td width='70%' align='left'>$telefono</td>
 			  </tr>
 			  <tr>
-				<td width='30%' align='left' bgcolor='#f0efef'><strong>Ciudad:</strong></td>
-				<td width='70%' align='left'>$ciudad</td>
-			  </tr>
-			  <tr>
-				<td width='30%' align='left' bgcolor='#f0efef'><strong>País:</strong></td>
-				<td width='70%' align='left'>$pais</td>
-			  </tr>
-			  <tr>
 				<td align='left' bgcolor='#f0efef'><strong>Comentario:</strong></td>
 				<td align='left'>$mensaje</td>
 			  </tr>
@@ -50,9 +40,7 @@ if(isset($_POST['enviar'])){
 		
 		//Cabeceras del correo
 	    $headers = "From: $nombre <$email>\r\n"; //Quien envia?
-	    $headers .= "X-Mailer: PHP5\n";
-	    $headers .= 'MIME-Version: 1.0' . "\n";
-	    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; //
+	    $headers .= "X-Mailer: PHP7\n";
 		
 		//Comprobamos que los datos enviados a la función MAIL de PHP estén bien y si es correcto enviamos
 		if(mail($para, $asunto, $mensaje, $headers)){

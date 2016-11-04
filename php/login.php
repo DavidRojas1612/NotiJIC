@@ -6,7 +6,7 @@
   $r = mysqli_query($con,$q);
 	$num = mysqli_num_rows($r);
 	if($num == 0){
-		print ('Usuario no permirido <a href="index.html">regresar</a>');
+		print ('Usuario no permirido <a href="index.html">Regresar</a>');
 
 	}else{
 		mysqli_free_result($r);

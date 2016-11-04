@@ -1,35 +1,36 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Contacto</title>
-		 <title>Empresa</title>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<link rel="stylesheet" href="css/estilos.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-	</head>
-	<body>
-		<div id="caja">
-				<header>
+<head>
+	<meta charset="UTF-8">
+	<title>NotiJIC</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+</head>
+<body>
+	<div id="caja">
+		<div class="container">
+			<header>
 				<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 					<div class="container-fluid">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-tooggle="collapse" data-target="#navbar-1">
+							<button type="button" class="navbar-toggle collapsed" data-tooggle="collapse" data-target="#menu1">
 								<span class="sr-only">Menu</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.html" class="navbar-brand">Empresa</a>
+							<a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> NotiJIC</a>
 						</div>
-						<div class="collapse navbar-collapse" id="navbar-1">
+						<div class="collapse navbar-collapse" id="menu1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Inicio</a></li>
+								<li class="active"><a href="index.html">Inicio</a></li>
 								<li><a href="#">Sobre nosotros</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="login.html">Sing in</a></li>
-								<li><a href="contacto.html">Contacto</a></li>
+								<li><a href="#login" data-toggle="modal" class="btn btn-jg">Iniciar sesión</a></li>
+								<li><a href="#registrar" data-toggle="modal" class="btn btn-jg">Registrarse</a></li>
 							</ul>
 						</div>
 					</div>
@@ -37,38 +38,212 @@
 			</header>
 			<br>
 			<br>
-			<header>
-				<h2>Logo</h2>
+			<header  class="">
+				<h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span>  NotiJIC</h2>
 			</header>
-			<div id="formulario">
-				<div class="row">
-					<form  action="contacto.php" method="POST" id="contacto" title="Nombre">
-
-					   <label class="sr-only"  for="nombre">Nombre</label>
-					   <input class="form-control"name="nombre" type="text" required="required" id="nombre" placeholder="nombre" tabindex="1" title="Nombre" required>
-					   <br>
-
-					   <label class="sr-only" for="email">Email</label>
-					   <input class="form-control"name="email" type="email" required="required" id="email" placeholder="email" tabindex="2" title="Email" required>
-					   <br>
-					   <label class="sr-only" for="telefono">Teléfono</label>
-					   <input class="form-control"name="telefono" type="text" id="telefono" placeholder="telefono" tabindex="3" title="Telefono">
-					   <br>
-					   <label class="sr-only"  for="Mensaje">Mensaje</label>
-					   <textarea class="form-control" name="mensaje" rows="4" id="mensaje" placeholder="mensaje" tabindex="6"></textarea>
-					   <br>
-					   <input class="btn btn-primary" type="submit" name="enviar" tabindex="7" value="Enviar">  <input class="btn btn-primary" type="reset" tabindex="8" value="Borrar">
-					   <input type="hidden" name="estado" value="1">
-
-   				</form>
-
-					</div>
-			</div>
-			<footer>
-				Todos los derechos reservados &copy ...
-			</footer>
 		</div>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	</body>
+
+		<div class="modal fade" id="login">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div id="lindo"class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-md-offset-4 col-md-6">
+							<h3 id="inicia">Iniciar Sesión &nbsp;<span class="glyphicon glyphicon-education"></span></h3>
+						</div>
+					</div>
+					<div class="modal-body">
+						<form id="formulario2" class="form-horizontal" method="POST" action="login.php">
+							<div class="form-group">
+								<div class="col-md-offset-3 col-md-6">
+									<input type="text" class="form-control" name="txtu" id="inputEmail3" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-offset-3 col-md-6">
+									<input type="password" class="form-control" id="inputPassword3" name="txtc" placeholder="Password">
+								</div>
+							</div>
+							<div class="row form-group form-inlines">
+								<div class="col-md-offset-3 col-md-9"  >
+														<!--<div class="checkbox">
+															<label>
+														  	<input type="checkbox" value="1" name="remember_me" checked="checked">
+																<span>Recordar mis datos</span>
+															</label>
+														</div>--><a href="#">¿Olvidaste tu contraseña?</a>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-offset-3 col-md-6">
+														<button type="submit" class="btn btn-info">Iniciar Sesión</button>
+													</div>
+												</div>
+											</form>
+										</div>
+
+			      		<!--	<div class="modal-footer">
+			        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        			<button type="button" class="btn btn-primary">Save changes</button>
+			        		</div> -->
+			        	</div><!-- /.modal-content -->
+			        </div><!-- /.modal-dialog -->
+			    </div><!-- /.modal -->
+
+
+			    <div class="modal fade" id="registrar">
+
+			    	<div class="modal-body">
+			    		<div class="container">
+			    			<div class="row centered-form">
+			    				<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+			    					<div class="modal-content">
+			    						<div class="modal-header">
+			    							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			    							<h3 class="panel-title">Únete a nosotros</h3>
+			    						</div>
+			    						<div class="modal-body">
+			    							<form role="form" action="./php/contacto.php" method="POST">
+			    								<div class="row">
+			    									<div class="col-xs-6 col-sm-6 col-md-6">
+			    										<div class="form-group">
+			    											<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nombre">
+			    										</div>
+			    									</div>
+			    									<div class="col-xs-6 col-sm-6 col-md-6">
+			    										<div class="form-group">
+			    											<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Apellidos">
+			    										</div>
+			    									</div>
+			    								</div>
+
+			    								<div class="form-group">
+			    									<input type="text" name="institucion" id="institucion" class="form-control input-sm" placeholder="Institución universitaria">
+			    								</div>
+
+			    								<div class="form-group">
+			    									<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo electronico">
+			    								</div>
+
+			    								<div class="form-group">
+			    									<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Confirmar correo electronico">
+			    								</div>
+
+			    								<div class="row">
+			    									<div class="col-xs-6 col-sm-6 col-md-6">
+			    										<div class="form-group">
+			    											<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
+			    										</div>
+			    									</div>
+			    									<div class="col-xs-6 col-sm-6 col-md-6">
+			    										<div class="form-group">
+			    											<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirmar contraseña">
+			    										</div>
+			    									</div>
+			    								</div>
+
+			    								<input type="submit" value="Registrarse" class="btn btn-info btn-block">
+
+			    							</form>
+			    						</div>
+			    					</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+
+			      		<!--	<div class="modal-footer">
+			        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        			<button type="button" class="btn btn-primary">Save changes</button>
+			        		</div> -->
+
+			        	</div><!-- /.modal -->
+
+
+
+			        	<section id="contact">
+			        		<div class="container">
+			        			<div class="row">
+			        				<div class="col-lg-12 text-center">
+			        					<h2 class="section-heading">Contactanos</h2>
+			        					<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+			        				</div>
+			        			</div>
+			        			<div class="row">
+			        				<div class="col-lg-12">
+			        					<form>
+			        						<div class="row">
+			        							<div class="col-md-6">
+			        								<div class="form-group">
+			        									<input type="text" class="form-control" placeholder="Nombre *" id="name" name="nombre" required>
+			        									<p class="help-block text-danger"></p>
+			        								</div>
+			        								<div class="form-group">
+			        									<input type="email" class="form-control" placeholder="Email *" id="email" name="email"required>
+			        									<p class="help-block text-danger"></p>
+			        								</div>
+			        								<div class="form-group">
+			        									<input type="tel" class="form-control" placeholder="Teléfono *" id="phone" name="telefono"required>
+			        									<p class="help-block text-danger"></p>
+			        								</div>
+			        							</div>
+			        							<div class="col-md-5">
+			        								<div class="form-group">
+			        									<textarea class="form-control" placeholder="Mensaje *" id="message" name="mensaje" required></textarea>
+			        									<p class="help-block text-danger"></p>
+			        								</div>
+			        							</div>
+			        							<div class="clearfix"></div>
+
+			        							<div class=" container row">
+			        								<div class="col-md-2">
+			        									<div id="success"></div>
+			        									<input class="btn btn-primary" type="submit" name="enviar" tabindex="7" value="Enviar">
+			        								</div>
+			        								<div class="col-md-2">
+			        									<input class="btn btn-primary" type="reset" tabindex="8" value="Borrar">
+			        									<input type="hidden" name="estado" value="1">
+			        								</div>
+			        							</div>   
+			        						</div>
+			        					</form>
+			        				</div>
+			        			</div>
+			        		</div>
+			        	</section>
+			        </div>
+			        <footer>
+			        	<div class="container">
+			        		<div class="row">
+			        			<div class="col-md-4">
+			        				<span class="copyright">Copyright &copy; NotiJIC 2016</span>
+			        			</div>
+			        			<div class="col-md-4">
+			        				<ul class="list-inline social-buttons">
+			        					<li><a href="#"><i class="fa fa-twitter"></i></a>
+			        					</li>
+			        					<li><a href="#"><i class="fa fa-facebook-official"></i></a>
+			        					</li>
+			        					<li><a href="#"><i class="fa fa-github"></i></a>
+			        					</li>
+			        					<li><a href="#"><i class="fa fa-youtube"></i></a>
+			        					</li>
+			        				</ul>
+			        			</div>
+			        			<div class="col-md-4">
+			        				<ul class="list-inline quicklinks">
+			        					<li><a href="#">Politicas de privacidad</a>
+			        					</li>
+			        					<li><a href="#">Terminos de uso</a>
+			        					</li>
+			        					<li><a href="contacto.html">Contacto</a>
+			        					</li>
+			        				</ul>
+			        			</div>
+			        		</div>
+			        	</div>
+			        </footer>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
 </html>
