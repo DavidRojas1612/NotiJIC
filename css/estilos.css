@@ -3,6 +3,18 @@ body{
 	font-family: Helvetica;
 	margin: 0;
 }
+
+nav{
+   background: #000000; 
+}
+
+nav a{
+    color: white;
+}
+
+
+
+
 .color1{
   background: #271e52;
   color: #fff;
@@ -15,7 +27,7 @@ body{
     cursor: move;
     padding-top: 8px;
     padding-bottom: 8px;
-		font-size: 16px;
+	font-size: 16px;
 }
 
 #inicia{
@@ -23,34 +35,25 @@ body{
 }
 
 #caja{
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 10px;
-	width: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 80%;
 }
-.box{
-	display: inline-block;
-	width: 70%;
-}
-.box2{
-	float: right;
-	width: 30%;
-}
-section, aside{
-	border-radius: 5px;
-	box-shadow: 2px 3px 1px gray;
-	background-color: #DDD;
-	padding: 10px;
-	margin: 10px;
-}
+
+
 
 footer{
 	color: white;
 	text-align: center;
 	padding: 10px;
 	background: #000000;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
+}
+
+footer a{
+    color: white;
 }
 
 label {
@@ -72,17 +75,13 @@ input {
     justify-content: space-around;
     text-align: center;
 }
-.infoContent .block .icon-social {
-    font-size: 30px;
-}
+
 
 i, cite, em, var, address, dfn {
     font-style: italic;
 }
 
-article {
-    display: block;
-}
+
 .titulo{
 	background-color: #383283;
 	border-radius: 5px;
@@ -117,24 +116,7 @@ input{
 	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
 
-section {
-    padding: 100px 0;
-}
 
-section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 40px;
-}
-
-section h3.section-subheading {
-    margin-bottom: 75px;
-    text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-}
 
 @media(min-width:768px) {
     section {
@@ -142,41 +124,12 @@ section h3.section-subheading {
     }
 }
 
-.service-heading {
-    margin: 15px 0;
-    text-transform: none;
-}
-
-
-.team-member {
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.team-member img {
-    margin: 0 auto;
-    border: 7px solid #fff;
-}
-
-.team-member h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
-}
-
-.team-member p {
-    margin-top: 0;
-}
-
-aside.clients img {
-    margin: 50px auto;
-}
-
 section#contact {
     background-color: #222;
     background-image: url(../img/map-image.png);
     background-position: center;
     background-repeat: no-repeat;
+     margin: 50px auto;
 }
 
 section#contact .section-heading {

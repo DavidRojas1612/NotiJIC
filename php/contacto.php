@@ -17,33 +17,14 @@ if(isset($_POST['enviar'])){
 		$para = "sebgv524@gmail.com";//Email al que se enviará
 		$asunto = "Contacto";//Asunto del correo
 		//Este sería el cuerpo del mensaje
-		$mensaje = "
-			<table border='0' cellspacing='3' cellpadding='2'>
-			  <tr>
-				<td width='30%' align='left' bgcolor='#f0efef'><strong>Nombre:</strong></td>
-				<td width='80%' align='left'>$nombre</td>
-			  </tr>
-			  <tr>
-				<td align='left' bgcolor='#f0efef'><strong>E-mail:</strong></td>
-				<td align='left'>$email</td>
-			  </tr>
-			   <tr>
-				<td width='30%' align='left' bgcolor='#f0efef'><strong>Teléfono:</strong></td>
-				<td width='70%' align='left'>$telefono</td>
-			  </tr>
-			  <tr>
-				<td align='left' bgcolor='#f0efef'><strong>Comentario:</strong></td>
-				<td align='left'>$mensaje</td>
-			  </tr>
-			</table>	
-		";	
+		$contenido = "Nombre: " . $nombre. "\nCorreo: ". $correo . "\nTeléfono: " . $telefono ."\nMensaje: " . $mensaje;	
 		
 		//Cabeceras del correo
 	    $headers = "From: $nombre <$email>\r\n"; //Quien envia?
 	    $headers .= "X-Mailer: PHP7\n";
 		
 		//Comprobamos que los datos enviados a la función MAIL de PHP estén bien y si es correcto enviamos
-		if(mail($para, $asunto, $mensaje, $headers)){
+		if(mail($para, $asunto, $mensaje)){
 			echo "Su mensaje se ha enviado correctamente";
 			echo "<br />";
 			echo '<a href="../contacto.html">Volver</a>';
