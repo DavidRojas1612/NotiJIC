@@ -13,10 +13,6 @@
 	}else{
 		mysqli_free_result($r);
 		mysqli_close($con);
-<<<<<<< HEAD
-		header("location:../contacto.html");
-=======
-		header("location:sesion.html");
->>>>>>> test
+		header("location:../sesion.html");
 	}
 ?>
